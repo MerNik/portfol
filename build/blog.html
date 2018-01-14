@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" href="images/fav_forest.png" type="image/png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <title>Блог</title>
+    <link href="./css/main.css" rel="stylesheet"><link href="./css/blog.css" rel="stylesheet"></head>
+<body>
+<div class="preloader">
+    <div class="preloader__content">
+        <div class="preloader__percents">0 %</div>
+        <div class="preloader__waves">
+            <svg id="preloader" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="80px" height="95.113px" viewbox="0 0 80 95.113" enable-background="new 0 0 80 95.113" xml:space="preserve">
+            <g>
+              <path class="first-wave" fill="none" stroke-dasharray="100" stroke-width="3.9003" stroke-miterlimit="10" d="M0,38.005c6.663,0,6.663,7.801,13.327,7.801							c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801							c6.67,0,6.67,7.801,13.339,7.801S73.33,38.005,80,38.005"></path>
+            </g>
+            <g>
+              <path class="second-wave" fill="none" stroke-dasharray="100" stroke-width="3.9003" stroke-miterlimit="10" d="M0,61.684c6.663,0,6.663,7.801,13.327,7.801							c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801							c6.67,0,6.67,7.801,13.339,7.801S73.33,61.684,80,61.684"></path>
+            </g>
+            <g>
+              <path class="third-wave" fill="none" stroke-dasharray="100" stroke-width="3.9003" stroke-miterlimit="10" d="M0,85.362c6.663,0,6.663,7.801,13.327,7.801							c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801							c6.67,0,6.67,7.801,13.339,7.801S73.33,85.362,80,85.362"></path>
+            </g>
+          </svg>
+        </div>
+    </div>
+</div>
+<header class="blog-header">
+    <div class="top-bar">
+        <div class="socials socials__top">
+            <ul class="social__list">
+                <li class="social__item">
+                    <svg class="icon icon-vk white-mod">
+                        <use xlink:href="images/sprite.svg#vk"></use>
+                    </svg>
+                </li>
+                <li class="social__item">
+                    <svg class="icon icon-github white-mod">
+                        <use xlink:href="images/sprite.svg#github"></use>
+                    </svg>
+                </li>
+                <li class="social__item">
+                    <svg class="icon icon-in white-mod">
+                        <use xlink:href="images/sprite.svg#in"></use>
+                    </svg>
+                </li>
+            </ul>
+        </div>
+        <div class="hamburger-menu">
+            <div class="hamburger" id="hamburger"><span class="line"></span><span class="line"></span><span class="line"></span></div>
+        </div>
+    </div>
+    <div class="menu-open">
+        <div class="menu-open__left"></div>
+        <div class="menu-open__right"></div>
+        <ul class="menu-open__list">
+            <li class="menu-open__item"><a class="menu-open__link" href="./work.html">Мои работы</a></li>
+            <li class="menu-open__item"><a class="menu-open__link" href="./about.html">Обо мне</a></li>
+            <li class="menu-open__item"><a class="menu-open__link" href="./blog.html">Блог</a></li>
+            <li class="menu-open__item"><a class="menu-open__link" href="./index.html">Авторизация</a></li>
+        </ul>
+    </div>
+    <div class="auth-intro">
+        <div class="auth-intro__info">
+            <div class="avatar auth-intro__avatar">
+                <div class="avatar__pic" style="background-image: url('images/main-avatar.jpg'); background-position: 44% 0%;  background-size: 150%;"></div><img class="visuallyHidden" src="images/main-avatar.jpg">
+            </div>
+            <div class="auth-intro__name"></div>
+            <div class="auth-section__title">
+                <h2 class="auth-section__text">Блог</h2>
+            </div>
+            <div class="auth-intro__descr">Статьи, которые я написала</div>
+        </div>
+    </div>
+</header>
+<div class="menu-tablets menu-tablets__hidden">
+    <div class="menu-tablets__bg">
+        <button class="open-menu"></button>
+    </div>
+    <div class="articles">
+        <ul class="articles__list">
+            <li class="articles__item">
+                <div class="articles__title"><a class="articles__link articles__link-tablets">Самое важное в SASS</a></div>
+            </li>
+            <li class="articles__item">
+                <div class="articles__title"><a class="articles__link articles__link-tablets">Приемы в верстке</a></div>
+            </li>
+            <li class="articles__item">
+                <div class="articles__title"><a class="articles__link articles__link-tablets">Самый необходимый набор Webpack плагинов</a></div>
+            </li>
+            <li class="articles__item">
+                <div class="articles__title"><a class="articles__link articles__link-tablets">Плюсы использования шаблонизатора Pug</a></div>
+            </li>
+        </ul>
+    </div>
+</div>
+<section class="blog-main">
+    <div class="about-figure-cut"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" class="traingle">
+        <polygon class = "left" points="0,0   0,86   500.8,86   500.8,75.5"></polygon>
+        <polygon class = "right" points="1000,0   1000,86   500,86   500,75.5"></polygon>
+    </svg>
+
+    </div>
+    <div class="main-container main-container__blog">
+        <div class="blog-side blog-side__left">
+            <div class="articles">
+                <ul class="articles__list">
+                    <li class="articles__item">
+                        <div class="articles__title"><a class="articles__link" href="#">Самое важное в SASS</a></div>
+                    </li>
+                    <li class="articles__item">
+                        <div class="articles__title"><a class="articles__link" href="#">Приемы в верстке</a></div>
+                    </li>
+                    <li class="articles__item">
+                        <div class="articles__title"><a class="articles__link" href="#">Самый необходимый набор Webpack плагинов</a></div>
+                    </li>
+                    <li class="articles__item">
+                        <div class="articles__title"><a class="articles__link" href="#">Плюсы использования шаблонизатора Pug</a></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="blog-content blog-content__container">
+            <div class="blog-article">
+                <div class="subtitle">
+                    <div class="subtitle__text subtitle__text_blog" id="sass">Самое важное в SASS</div>
+                </div>
+                <div class="content-date">22 ноября 2017</div>
+                <div class="content-text">
+                    <p>Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия.</p>
+                    <p>Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</p>
+                </div>
+            </div>
+            <div class="blog-article">
+                <div class="subtitle">
+                    <div class="subtitle__text subtitle__text_blog" id="makeups">Приемы в верстке</div>
+                </div>
+                <div class="content-date">
+                    <div class="content-date__date">4 декабря 2017</div>
+                </div>
+                <div class="content-text">
+                    <p>Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия.</p>
+                    <p>Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</p>
+                </div>
+            </div>
+            <div class="blog-article">
+                <div class="subtitle">
+                    <div class="subtitle__text subtitle__text_blog" id="webpack-plugins">Самый необходимый набор Webpack плагинов</div>
+                </div>
+                <div class="content-date">
+                    <div class="content-date__date">25 декабря 2017</div>
+                </div>
+                <div class="content-text">
+                    <p>Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия.</p>
+                    <p>Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</p>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footer__up">
+                <div class="footer__descr">Этот сайт сделан в рамках обучения в Школе онлайн образования LoftSchool.</div>
+                <div class="footer__links">
+                    <div class="footer-nav">
+                        <ul class="footer-nav__list">
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="./work.html">Мои работы</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="./about.html">Обо мне</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="./blog.html">Блог</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="./">Авторизация</a></li>
+                        </ul>
+                    </div>
+                    <div class="socials footer-socials">
+                        <ul class="social__list">
+                            <li class="social__item">
+                                <svg class="icon icon-vk footer-mod">
+                                    <use xlink:href="images/sprite.svg#vk"></use>
+                                </svg>
+                            </li>
+                            <li class="social__item">
+                                <svg class="icon icon-github footer-mod">
+                                    <use xlink:href="images/sprite.svg#github"></use>
+                                </svg>
+                            </li>
+                            <li class="social__item">
+                                <svg class="icon icon-in footer-mod">
+                                    <use xlink:href="images/sprite.svg#in"></use>
+                                </svg>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__quote">
+                    <blockquote>
+                        <p>Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.</p>
+                        <cite>
+                            Martin Golding</cite>
+                    </blockquote>
+                </div>
+            </div>
+            <div class="footer__down"><span>
+               © Мария Никитина | Создано с любовью в LoftSchool | 2018</span></div>
+        </footer>
+    </div>
+</section>
+<script type="text/javascript" src="./js/common.js"></script><script type="text/javascript" src="./js/main.js"></script><script type="text/javascript" src="./js/blog.js"></script></body>
+</html>

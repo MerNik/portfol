@@ -1,0 +1,83 @@
+extends ../base
+block variables
+	- name = 'Мария Никитина'
+	- descr = 'Личный сайт веб разработчика'
+block head
+	meta(charset="UTF-8")
+	title Мои работы
+block content
+	header.works-header
+		block header
+		include ../includes/_header/_header
+		.arrow-down.arrow-down__works
+			a(href="#"): +icon('arrow_down')
+		.figure-cut
+			include ../../img/bg.svg
+	.title-container
+		.section-title.section-title_works
+			h1.section-title__text
+				|Мои работы
+			.section-title__shadow.section-title__shadow_about-section
+				+shadowTitle('works_header','header_style')
+	section.works-slider
+		.works-slider__left
+		.works-slider__right
+	section.reviews-section
+		.section-title
+			h2.section-title__text
+				|Что обо мне говорят
+			.section-title__shadow.section-title__shadow_about-section
+				+shadowTitle('about_header','header_style')
+		.reviews
+			ul.reviews__list
+				li.reviews__item
+					.reviews__avatar
+						.reviews__pic(style="background-image: url('images/rev_ava_1.jpg'); background-size: cover;")
+						img.visuallyHidden(src=require("../../img/rev_ava_1.jpg"))
+					.reviews__text
+						|Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей
+					.reviews__author
+						.reviews__name
+							| Ковальчук Дмитрий
+						.reviews__occ
+							| основатель LoftScool
+				li.reviews__item
+					.reviews__avatar
+						.reviews__pic(style="background-image: url('images/rev_ava_2.jpg'); background-size: cover;")
+						img.visuallyHidden(src=require("../../img/rev_ava_2.jpg"))
+					.reviews__text
+						|Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+					.reviews__author
+						.reviews__name
+							|Сабанцев Владимир
+						.reviews__occ
+							| преподаватель
+
+		.feedback
+			.feedback__title
+				.subtitle
+					h3.subtitle__text
+						| Связаться со мной
+			form.feedback-form
+				.feedback-form__elem
+					label(label for="feedback-name" name="feedback-name" class="feedback-form__label")
+					input(type="text" id="feedback-name" class="feedback-form__input" placeholder="Имя")
+				.feedback-form__elem
+					label(label for="feedback-email" name="feedback-email" class="feedback-form__label")
+					input(type="text" id="feedback-email" class="feedback-form__input" placeholder="Email")
+				.feedback-form__textarea
+					label(for="comment" class="feedback-form__label")
+					textarea(id="comment" class="feedback-form__input feedback-form__input--comment" placeholder="Ваше сообщение")
+				.feedback-form__controls
+						button(type="submit" class="btn")
+							span: | Отправить
+						button(type="reset" class="btn")
+							span: | Очистить
+
+		include ../includes/_footer/_footer
+	
+
+	
+
+
+

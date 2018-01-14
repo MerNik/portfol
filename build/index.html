@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" href="images/fav_forest.png" type="image/png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="./css/index.css" rel="stylesheet"></head>
+<body>
+<div class="preloader">
+    <div class="preloader__content">
+        <div class="preloader__percents">0 %</div>
+        <div class="preloader__waves">
+            <svg id="preloader" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="80px" height="95.113px" viewbox="0 0 80 95.113" enable-background="new 0 0 80 95.113" xml:space="preserve">
+            <g>
+              <path class="first-wave" fill="none" stroke-dasharray="100" stroke-width="3.9003" stroke-miterlimit="10" d="M0,38.005c6.663,0,6.663,7.801,13.327,7.801							c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801							c6.67,0,6.67,7.801,13.339,7.801S73.33,38.005,80,38.005"></path>
+            </g>
+            <g>
+              <path class="second-wave" fill="none" stroke-dasharray="100" stroke-width="3.9003" stroke-miterlimit="10" d="M0,61.684c6.663,0,6.663,7.801,13.327,7.801							c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801							c6.67,0,6.67,7.801,13.339,7.801S73.33,61.684,80,61.684"></path>
+            </g>
+            <g>
+              <path class="third-wave" fill="none" stroke-dasharray="100" stroke-width="3.9003" stroke-miterlimit="10" d="M0,85.362c6.663,0,6.663,7.801,13.327,7.801							c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801							c6.67,0,6.67,7.801,13.339,7.801S73.33,85.362,80,85.362"></path>
+            </g>
+          </svg>
+        </div>
+    </div>
+</div>
+<div class="Background">
+    <canvas class="Background-canvas"></canvas>
+</div>
+<div class="wellcome-page">
+    <div class="container">
+        <button class="auth-button">Авторизоваться</button>
+        <div class="flip">
+            <div class="auth">
+                <div class="auth__intro">
+                    <div class="avatar auth__avatar">
+                        <div class="avatar__pic" style="background-image: url('images/main-avatar.jpg'); background-position: 44% 0%;  background-size: 150%;"></div><img class="visuallyHidden" src="images/main-avatar.jpg">
+                    </div>
+                    <div class="auth__name">Мария Никитина</div>
+                    <div class="auth__descr">Личный сайт веб разработчика</div>
+                    <div class="auth__socials">
+                        <div class="socials socials__index">
+                            <ul class="social__list">
+                                <li class="social__item"> <a href="#">
+                                    <svg class="icon icon-vk standard-mod">
+                                        <use xlink:href="images/sprite.svg#vk"></use>
+                                    </svg></a></li>
+                                <li class="social__item"><a href="#">
+                                    <svg class="icon icon-github standard-mod">
+                                        <use xlink:href="images/sprite.svg#github"></use>
+                                    </svg></a></li>
+                                <li class="social__item"><a href="#">
+                                    <svg class="icon icon-in standard-mod">
+                                        <use xlink:href="images/sprite.svg#in"></use>
+                                    </svg></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="auth-intro__buttons">
+                        <ul class="buttons__list">
+                            <li class="buttons__item"> <a class="buttons__link" href="./work.html">Мои работы</a></li>
+                            <li class="buttons__item"><a class="buttons__link" href="./about.html">Обо мне</a></li>
+                            <li class="buttons__item"><a class="buttons__link" href="./blog.html">Блог</a></li>
+                        </ul>
+                    </div>
+                    <div class="test-block"></div>
+                </div>
+                <div class="auth__backside">
+                    <form class="auth-form">
+                        <div class="subtitle subtitle__intro">
+                            <h3 class="subtitle__text">Авторизуйтесь</h3>
+                        </div>
+                        <div class="auth-form__elem auth-form__elem_login">
+                            <svg class="icon icon-login login-main">
+                                <use xlink:href="images/sprite.svg#login"></use>
+                            </svg>
+                            <label class="auth-form__label" label for="login" name="login"></label>
+                            <input class="auth-form__input" type="text" name="login" id="auth-login" placeholder="Логин" required="true">
+                        </div>
+                        <div class="auth-form__elem auth-form__elem_password">
+                            <svg class="icon icon-password password-main">
+                                <use xlink:href="images/sprite.svg#password"></use>
+                            </svg>
+                            <label class="auth-form__label" label for="password" name="password"></label>
+                            <input class="auth-form__input" type="password" name="password" id="auth-password" placeholder="Пароль" required="true">
+                        </div>
+                        <div class="auth-form__check">
+                            <input class="auth-form__checkbox-name" type="checkbox" name="capcha" id="ch" required="true">
+                            <label class="auth-form__checkbox" for="ch"><span></span>Я человек</label>
+                        </div>
+                        <div class="auth-form__question">Вы точно не робот?</div>
+                        <div class="auth-form__radios">
+                            <div class="auth-form__radio">
+                                <input class="auth-form__radio-elem" type="radio" name="r-choice-yes" id="r1">
+                                <label class="auth-form__radio-name" for="r1"><span class="custom"></span><span class="answer">Да</span></label>
+                            </div>
+                            <div class="auth-form__radio">
+                                <input class="auth-form__radio-elem" type="radio" name="r-choice-no" id="r2">
+                                <label class="auth-form__radio-name" for="r2"><span class="custom"></span><span class="answer">Не уверен</span></label>
+                            </div>
+                        </div>
+                        <div class="auth-form__controls">
+                            <button class="btn" type="button" onclick="location.href='./about.html';"><span>На главную</span></button>
+                            <button class="btn" type="submit"><span>Войти		</span></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wellcome-footer">
+        <div class="wellcome-footer__text">© Мария Никитина | создано с любовью в LoftSchool | 2018</div>
+    </div>
+</div>
+<script type="text/javascript" src="./js/common.js"></script><script type="text/javascript" src="./js/index.js"></script><script type="text/javascript" src="./js/webgl.js"></script></body>
+</html>

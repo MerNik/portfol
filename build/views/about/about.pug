@@ -1,0 +1,71 @@
+extends ../base
+block variables
+	- name = 'Мария Никитина'
+	- descr = 'Личный сайт веб разработчика'
+block head
+	meta(charset="UTF-8")
+	title Обо мне
+block content
+	header.about-header
+		block header
+		include ../includes/_header/_header
+	section.about-main
+		.about-figure-cut
+			include ../../img/bg-about.svg
+		.about-content
+			.about-left-side
+				.side-title
+					.section-title.section-title_about
+						h1.section-title__text
+							|Обо мне
+					.section-title__shadow.section-title__shadow_about-section
+						+shadowTitle('about_header','header_style')
+				.side-descr
+					.side-decsr__avatar
+						.avatar-img(style="background-image: url('images/main-avatar.jpg'); background-position: 44% 0%;  background-size: cover;")
+						img.visuallyHidden(src = (' + require("../../img/main-avatar.jpg") + '))
+					.side-descr__title
+						.subtitle
+							h3.subtitle__text
+								| Кто я
+							//- hr.subtitle__hr
+					p.side-descr__info
+						|Я веб разработчик из Санкт-Петербурга.
+						|Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты. 
+					p.side-descr__info
+						|Этот сайт сделан в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+			.about-right-side
+				.side-descr
+					.subtitle
+						h3.subtitle__text
+							| Чем я могу быть вам полезен
+				.side-content
+					p.side-descr__info
+						| Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.					
+				include ../includes/_skills/_skills
+
+	section.map
+		include ../includes/_map/_map
+		.map__data
+			.contacts
+				.contacts__title
+					.subtitle.subtitle_contacts
+						h3.subtitle__text
+							| Контакты
+				ul.contacts__list
+					-
+						var contacts = [
+							['skype','lvovik 6'],
+							['envelope2','meri.an.nikitina@gmail.com'],
+							['phone2','+79117012578'],
+							['map_marker','Санкт-Петербург'],
+						]
+					each contact in contacts
+						li.contacts__item
+							.contacts-row
+								.contacts-row__icon
+									a(href="#"): +icon(contact[0],'green-mod')
+								.contacts-row__content #{contact[1]}
+
+		block footer
+		include ../includes/_footer/_footer

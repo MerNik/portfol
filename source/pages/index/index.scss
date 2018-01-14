@@ -1,0 +1,504 @@
+@import '../../style/main.scss'; 
+
+
+body {
+	position: relative;
+}
+
+.wellcome-page {
+	// background-image: url('../../img/main_bg.jpg');
+	background-size: cover;
+	height: 100vh;
+	position: relative;
+  @include phones() {
+		height: auto;
+  }
+}
+  .Background {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	overflow: hidden;
+	
+}
+
+.Background::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), transparent 50%, rgba(0, 0, 0, 0.5));
+}
+
+.Background-canvas {
+	max-width: 100%;
+	max-height: 100%;
+}
+	// &::before {
+	// 	background: transparent;
+ //    background: linear-gradient(to bottom, rgba(0, 0, 0, .35) 0%, rgba(0, 0, 0, 0.1) 100%);
+ //    content: "";
+ //    display: block;
+ //    height: 20%;
+ //    left: 0;
+ //    position: absolute;
+ //    top: 0;
+ //    width: 100%;
+	// }
+	// &::after {
+	// 	background: transparent;
+ //    background: linear-gradient(to top, rgba(0, 0, 0, .35) 0%, rgba(0, 0, 0, 0.1) 100%);
+ //    content: "";
+ //    display: block;
+ //    height: 20%;
+ //    left: 0;
+ //    position: absolute;
+ //    bottom: 0;
+ //    width: 100%;
+	// }
+
+
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	height: 97vh;
+	position: relative;
+}
+
+.auth-button {
+	position: absolute;
+	top: 25px;
+	right: 60px;
+	width: 180px;
+	height: 45px;
+	border-radius: 25px;
+	background-color: transparent;
+	border: 1px solid #fff;
+	color: #fff;
+	font-family: $mediumfont;
+	transition: .5s;
+  @include phones() {
+		left: 50%;
+		right: auto;
+		margin-left: -90px;
+	
+  }
+	&:hover {
+		background-color: $lightgreen;
+		border-color: #538643;
+		cursor: pointer;
+	}
+}
+
+
+.flip {
+	margin: 0 auto;
+	width: 380px;
+	height: 420px;
+	perspective: 1000;
+	@include phones() {
+		max-width: 300px;
+  }
+}
+.rotated {
+	transform: rotateY(180deg);
+}
+
+.auth {
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	transition: 0.6s;
+	transform-style: preserve-3d;
+  // perspective: 1000px;
+	
+
+	&__intro {
+		// margin: 0 auto;
+		border-radius: 5px;
+		width: 100%;
+		// max-width: 80%;
+		height: 420px;
+		display: flex;
+		flex-direction: column;
+		background-color: rgba(18, 38, 32, .6);
+		overflow: hidden;
+		backface-visibility: hidden;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 2;
+	 //  @include phones() {
+		// 	max-width: 80%;
+  // }
+	}
+}
+
+.avatar {
+	width: 140px;
+	height: 140px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.avatar__pic {
+	width: 140px;
+	height: 140px;
+}
+
+
+
+.auth__avatar{
+	margin: 38px auto 20px;
+}
+
+.auth__name {
+	color: #fff;
+	font-size: 28px;
+	font-family: $mediumfont;
+	line-height: 34px;
+	font-smoothing: antialiased;
+	margin: 0 auto 10px;
+
+}
+
+.auth__descr {
+	color: #fff;
+	opacity: .8;
+	font-family: $mediumfont;
+	margin: 0 auto 35px;
+}
+
+.auth__socials {
+	margin-bottom: 56px;
+}
+
+.socials {
+	width: 140px;
+	&__index {
+ 	margin: 0 auto;
+ 	}
+	&__top {
+		width: 138px;
+		margin: 0 0 0 30px;
+	}
+}
+
+.social__list {
+	display: flex;
+	// justify-content: space-between;
+}
+
+.social__item {
+	margin-right: 25px;
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+.icon {
+	height: 22px;
+	width: 30px;
+	transition: .2s;
+	&.standard-mod {
+		fill:#8e9c99;
+	}
+	&:hover {
+		fill: $lightgreen;
+		cursor: pointer;
+		
+	}
+}
+
+.auth-intro__buttons {
+	height: 45px;
+	// background-color: red;
+	border-radius: 0 0 5px 5px;
+}
+
+.buttons__list {
+	display: flex;
+	justify-content: space-between;
+}
+.buttons__link{
+	display: block;
+	height: 100%;
+	color: #fff;
+	text-decoration: none;
+	text-align: center;
+	line-height: 45px;
+			
+}
+.buttons__item {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	margin: 0 auto;
+	height: 45px;
+	background-color: $green;
+	transition: .2s;
+	&:hover {
+		background-color: #538643;
+		cursor: pointer;
+	}
+	&:nth-child(1) {
+		width: 154px;
+		border-right: 2px solid #a6bda3;
+		border-radius: 0 0 0 5px;
+	}
+	&:nth-child(2) {
+		width: 127px;
+		border-right: 2px solid #a6bda3;
+	}
+	&:nth-child(3) {
+		width: 97px;
+		border-radius: 0 0 5px 0;
+	}
+	span {
+		display: block;
+		color: #fff;
+		text-align: center;
+		font-family: $mediumfont;
+	}
+}
+
+.auth__backside {
+	width: 100%;
+	height: 420px;
+	background-color: rgba(18,38,32,.6);
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: rotateY(180deg);
+	z-index: 2;
+  // @include phones() {
+		// max-width: 80%;
+  // }
+
+}
+
+.subtitle {
+		color: #566358;
+		&__text {
+		font-family: $titles;
+		font-size: 35px;
+		text-align: center;
+		margin: 0;
+		text-transform: uppercase;
+		}
+		&::after {
+			display: block;
+			content: "";
+			margin: 20px auto;
+			width: 90px;
+			border-bottom: 3px solid #566358;			
+		}
+}
+.subtitle__intro {
+	padding-top: 20px;
+	color: #fff;
+	&::after {
+	display: block;
+	content: "";
+	margin: 35px auto;
+	width: 90px;
+	border-bottom: 3px solid #fff;	
+	}
+}
+
+.auth-form {
+	position: relative;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: #fff;
+}
+
+.auth-form__elem {
+	position: relative;
+	display: flex;
+	margin: 0 20px;
+	width: 90%;
+	&:before {
+		content: "";
+		display: inline;
+		width: 45px;
+		height: 45px;
+		border-top-left-radius: 22px;
+		border-bottom-left-radius: 22px;
+		background-color: #f0efe9;
+	}
+}
+
+.login-main {
+	fill: red;
+}
+
+.auth-form__check {
+	display: block;
+	margin: 0 20px 18px;
+	width: 80%;
+	text-align: center;
+}
+
+.auth-form__input {
+	height: 45px;
+	border: 0px solid;
+	border-top-right-radius: 22px;
+	border-bottom-right-radius: 22px;
+	width: 100%;
+	margin-bottom: 20px;
+	padding: 17px 17px;
+	box-sizing: border-box;
+	resize: none;
+	outline: 0;
+	color: $darkgreen;
+	&::placeholder {
+		opacity: .5;
+	}
+	&:focus {
+	border: 1px solid $green;
+	}
+}
+
+.auth-form__question {
+	margin: 0 20px 10px;
+	font-family: $bold;
+}
+
+.auth-form__radios {
+	display: flex;
+	justify-content: space-around;
+  @include phones() {
+		margin-bottom: 35px;
+  }
+}
+
+.auth-form__radio {
+	margin: 0 20px;
+	cursor: pointer;
+}
+
+input[type="radio"], input[type="checkbox"]{
+    position: absolute; 
+    overflow: hidden;   
+    clip: rect(0 0 0 0);    
+    height: 0.0625rem;    
+    width: 0.0625rem; 
+    margin: -0.0625rem;   
+    padding: 0; 
+    border: 0;
+
+}
+
+input[type="checkbox"] + label span {
+    display:inline-block;
+    margin-right: 10px;
+    margin-top: -1px;
+    width:21px;
+    height:21px;
+    vertical-align:top;
+    background: url('../../img/checkbox_radio/Check_sprite.png') -21px top no-repeat;
+    border-radius: 2px;
+    cursor:pointer;
+    box-sizing: border-box;
+}
+
+input[type="checkbox"]:checked + label span {
+    background: url('../../img/checkbox_radio/Check_sprite.png') 0px top no-repeat;
+    transition: .5;
+}
+input[type="checkbox"]:focus + label span{
+	box-shadow: 0 0 10px $green;
+}
+
+input[type="radio"]:focus + label .answer { 
+	border: 1px dotted $green;
+}
+
+input[type="radio"] + label .custom {
+    display:inline-block;
+    margin-right: 10px;
+    margin-top: 1px;
+    width:20px;
+    height:20px;
+    vertical-align:top;
+    background: url('../../img/checkbox_radio/radio.png') -1px top no-repeat;
+    cursor:pointer;
+}
+
+input[type="radio"]:checked + label .custom {
+    background: url('../../img/checkbox_radio/radio.png') -21px top no-repeat;
+    transition: .5;
+}
+
+input[type="radio"]:checked + label .custom +.answer{
+	 color: $green;
+
+}
+
+
+
+.auth-form__controls {
+	width: 100%;
+	height: 45px;
+	position: absolute;
+	bottom: 0;
+	border-radius: 0 0 5px 5px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.btn {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	margin: 0 auto;
+	height: 45px;
+	background-color: $green;
+	transition: .2s;
+	border:0;
+	border-right: 2px solid #a6bda3;
+	border-radius: 0 0 0 5px;
+	align-items: center;
+	&:hover {
+		background-color: #538643;
+		cursor: pointer;
+	}
+	&:last-child {
+		border: 0px;
+		border-radius: 0 0 5px 0;
+	}
+	span {
+		display: block;
+		color: #fff;
+		text-align: center;
+		font-family: $mediumfont;
+	}
+}
+
+.wellcome-footer {
+	color: #fff;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-around;
+	&__text {
+		text-align: center;
+		font-size: 14px;
+		line-height: 24px;
+	}
+
+	
+}
+
